@@ -5,7 +5,11 @@ public class Cube {
     private double sideLength;
 
     public Cube(double sideLength) {
-        this.sideLength = sideLength;
+        if (sideLength <= 0) {
+            this.sideLength = 0;
+        } else {
+            this.sideLength = sideLength;
+        }
     }
 
     public double area() {

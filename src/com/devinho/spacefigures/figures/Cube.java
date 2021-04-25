@@ -26,6 +26,6 @@ public class Cube {
 
     @Override
     public String toString() {
-        return "The cube has side length of " + this.sideLength + ", area " + this.area() + ", volume " + this.volume();
+        return "Side length = " + this.sideLength + "\nArea = " + this.area() + "\nVolume = " + this.volume();
     }
 }

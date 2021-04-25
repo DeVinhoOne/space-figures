@@ -1,6 +1,7 @@
 package com.devinho.spacefigures.userinterface;
 
 import com.devinho.spacefigures.figures.Cube;
+import com.devinho.spacefigures.figures.Sphere;
 
 import java.util.Scanner;
 
@@ -26,12 +27,20 @@ public class UserInterface {
 
             switch (input) {
                 case "c":
-                    System.out.println("\nYou have chosen CUBE. Enter a side length");
+                    System.out.println("\nYou have chosen a CUBE. Enter a side length");
                     System.out.print(">>> ");
                     double sideLength = scanner.nextDouble();
                     scanner.nextLine();
                     Cube cube = new Cube(sideLength);
                     System.out.println(cube);
+                    break;
+                case "s":
+                    System.out.println("\nYou have chosen a SPHERE. Enter a radius");
+                    System.out.print(">>> ");
+                    double radius = scanner.nextDouble();
+                    scanner.nextLine();
+                    Sphere sphere = new Sphere(radius);
+                    System.out.println(sphere);
                     break;
                 default:
                     System.out.println("Invalid input.");
@@ -51,6 +60,7 @@ public class UserInterface {
         System.out.print("--------------------------------");
         System.out.println("\nType a letter to create:");
         System.out.println("\tc - CUBE");
+        System.out.println("\ts - SPHERE");
         System.out.println();
         System.out.println("If You want to exit, type x.");
         System.out.println("--------------------------------");

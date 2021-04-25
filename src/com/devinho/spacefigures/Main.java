@@ -1,5 +1,7 @@
 package com.devinho.spacefigures;
 
+import com.devinho.spacefigures.figures.Cube;
+
 import java.util.Scanner;
 
 public class Main {

@@ -1,4 +1,4 @@
-package com.devinho.spacefigures;
+package com.devinho.spacefigures.figures;
 
 public class Cube {
 

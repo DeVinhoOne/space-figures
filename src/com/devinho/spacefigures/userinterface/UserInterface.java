@@ -3,7 +3,9 @@ package com.devinho.spacefigures.userinterface;
 import com.devinho.spacefigures.figures.Cube;
 import com.devinho.spacefigures.figures.Sphere;
 import com.devinho.spacefigures.figures.RightCircularCone;
+import com.devinho.spacefigures.util.Figures;
 
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -25,9 +27,10 @@ public class UserInterface {
                 System.out.println("*** Goodbye ***");
                 break;
             }
+            Figures figure = Figures.valueOf(input.toUpperCase());
 
-            switch (input) {
-                case "c":
+            switch (figure) {
+                case CUBE:
                     System.out.println("\nYou have chosen a CUBE. Enter a side length");
                     System.out.print(">>> ");
                     double sideLength = scanner.nextDouble();
@@ -35,7 +38,7 @@ public class UserInterface {
                     Cube cube = new Cube(sideLength);
                     System.out.println(cube);
                     break;
-                case "s":
+                case SPHERE:
                     System.out.println("\nYou have chosen a SPHERE. Enter a radius");
                     System.out.print(">>> ");
                     double radius = scanner.nextDouble();
@@ -43,7 +46,7 @@ public class UserInterface {
                     Sphere sphere = new Sphere(radius);
                     System.out.println(sphere);
                     break;
-                case "rcc":
+                case CONE:
                     System.out.println("\nYou have chosen a RIGHT CIRCULAR CONE. Enter a radius and height");
                     System.out.print(">>> ");
                     double rccRadius = scanner.nextDouble();
@@ -70,10 +73,10 @@ public class UserInterface {
 
     private void printInstructions() {
         System.out.print("--------------------------------");
-        System.out.println("\nType a letter to create:");
-        System.out.println("\tc - CUBE");
-        System.out.println("\ts - SPHERE");
-        System.out.println("\trcc - RIGHT CIRCULAR CONE");
+        System.out.println("\nEnter a figure name You want:");
+        System.out.println("\tcube");
+        System.out.println("\tsphere");
+        System.out.println("\tcone");
         System.out.println();
         System.out.println("If You want to exit, type x.");
         System.out.println("--------------------------------");

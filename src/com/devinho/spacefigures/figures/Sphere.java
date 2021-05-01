@@ -6,10 +6,9 @@ public class Sphere {
 
     public Sphere(double radius) {
         if (radius <= 0) {
-            this.radius = 0;
-        } else {
-            this.radius = radius;
+            throw new IllegalArgumentException("Can't provide negative value");
         }
+        this.radius = radius;
     }
 
     public double area() {

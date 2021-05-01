@@ -6,10 +6,9 @@ public class Cube {
 
     public Cube(double sideLength) {
         if (sideLength <= 0) {
-            this.sideLength = 0;
-        } else {
-            this.sideLength = sideLength;
+            throw new IllegalArgumentException("Can't provide negative value");
         }
+        this.sideLength = sideLength;
     }
 
     public double area() {

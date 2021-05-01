@@ -5,7 +5,6 @@ import com.devinho.spacefigures.figures.Sphere;
 import com.devinho.spacefigures.figures.RightCircularCone;
 import com.devinho.spacefigures.util.Figures;
 
-import java.io.FileReader;
 import java.util.Scanner;
 
 public class UserInterface {

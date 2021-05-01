@@ -1,6 +1,8 @@
 package com.devinho.spacefigures.figures;
 
-public class Sphere {
+import com.devinho.spacefigures.util.Figure;
+
+public class Sphere extends Figure {
 
     private double radius;
 

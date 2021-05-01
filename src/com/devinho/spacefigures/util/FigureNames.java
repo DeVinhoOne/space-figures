@@ -1,6 +1,6 @@
 package com.devinho.spacefigures.util;
 
-public enum Figures {
+public enum FigureNames {
     CUBE,
     SPHERE,
     CONE

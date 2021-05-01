@@ -1,6 +1,8 @@
 package com.devinho.spacefigures.figures;
 
-public class RightCircularCone {
+import com.devinho.spacefigures.util.Figure;
+
+public class RightCircularCone extends Figure {
 
     private double radius;
     private double height;

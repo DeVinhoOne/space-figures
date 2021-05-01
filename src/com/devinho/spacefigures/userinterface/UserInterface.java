@@ -3,7 +3,7 @@ package com.devinho.spacefigures.userinterface;
 import com.devinho.spacefigures.figures.Cube;
 import com.devinho.spacefigures.figures.Sphere;
 import com.devinho.spacefigures.figures.RightCircularCone;
-import com.devinho.spacefigures.util.Figures;
+import com.devinho.spacefigures.util.FigureNames;
 
 import java.util.Scanner;
 
@@ -26,9 +26,9 @@ public class UserInterface {
                 System.out.println("*** Goodbye ***");
                 break;
             }
-            Figures figure = Figures.valueOf(input.toUpperCase());
+            FigureNames figureName = FigureNames.valueOf(input.toUpperCase());
 
-            switch (figure) {
+            switch (figureName) {
                 case CUBE:
                     System.out.println("\nYou have chosen a CUBE. Enter a side length");
                     System.out.print(">>> ");

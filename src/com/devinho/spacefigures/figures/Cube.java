@@ -1,6 +1,8 @@
 package com.devinho.spacefigures.figures;
 
-public class Cube {
+import com.devinho.spacefigures.util.Figure;
+
+public class Cube extends Figure {
 
     private double sideLength;
 

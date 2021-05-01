@@ -2,12 +2,12 @@ package com.devinho.spacefigures.figures;
 
 import com.devinho.spacefigures.util.Figure;
 
-public class RightCircularCone extends Figure {
+public class RightCylinder extends Figure {
 
     private double radius;
     private double height;
 
-    public RightCircularCone(double radius, double height) {
+    public RightCylinder(double radius, double height) {
         if (radius < 0 || height < 0) {
             throw new IllegalArgumentException("Can't provide negative value");
         }
@@ -17,12 +17,12 @@ public class RightCircularCone extends Figure {
 
     @Override
     public double area() {
-        return (Math.PI * this.radius) * (this.radius + Math.sqrt((this.height * this.height) + (this.radius * this.radius)));
+        return (2 * Math.PI * this.radius * this.height) + (2 * Math.PI * this.radius * this.radius);
     }
 
     @Override
     public double volume() {
-        return Math.PI * this.radius * this.radius * (this.height / 3);
+        return Math.PI * this.radius * this.radius * this.height;
     }
 
     @Override

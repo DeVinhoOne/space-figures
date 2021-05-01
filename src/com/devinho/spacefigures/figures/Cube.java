@@ -13,10 +13,12 @@ public class Cube extends Figure {
         this.sideLength = sideLength;
     }
 
+    @Override
     public double area() {
         return 8 * (sideLength * sideLength);
     }
 
+    @Override
     public double volume() {
         return sideLength * sideLength * sideLength;
     }

@@ -1,9 +1,9 @@
 package com.devinho.spacefigures.userinterface;
 
 import com.devinho.spacefigures.figures.Cube;
-import com.devinho.spacefigures.figures.RightCylinder;
+import com.devinho.spacefigures.figures.Cylinder;
 import com.devinho.spacefigures.figures.Sphere;
-import com.devinho.spacefigures.figures.RightCircularCone;
+import com.devinho.spacefigures.figures.Cone;
 import com.devinho.spacefigures.util.FigureNames;
 
 import java.util.Scanner;
@@ -31,7 +31,7 @@ public class UserInterface {
 
             switch (figureName) {
                 case CUBE:
-                    System.out.println(figureName.getFigureInformation());
+                    System.out.println(figureName.getDescription());
                     System.out.print(">>> ");
                     double sideLength = scanner.nextDouble();
                     scanner.nextLine();
@@ -39,7 +39,7 @@ public class UserInterface {
                     System.out.println(cube);
                     break;
                 case SPHERE:
-                    System.out.println(figureName.getFigureInformation());
+                    System.out.println(figureName.getDescription());
                     System.out.print(">>> ");
                     double radius = scanner.nextDouble();
                     scanner.nextLine();
@@ -47,26 +47,26 @@ public class UserInterface {
                     System.out.println(sphere);
                     break;
                 case CONE:
-                    System.out.println(figureName.getFigureInformation());
+                    System.out.println(figureName.getDescription());
                     System.out.print(">>> ");
                     double rccRadius = scanner.nextDouble();
                     scanner.nextLine();
                     System.out.print(">>> ");
                     double rccHeight = scanner.nextDouble();
                     scanner.nextLine();
-                    RightCircularCone rightCircularCone = new RightCircularCone(rccRadius, rccHeight);
-                    System.out.println(rightCircularCone);
+                    Cone cone = new Cone(rccRadius, rccHeight);
+                    System.out.println(cone);
                     break;
-                case RIGHT_CYLINDER:
-                    System.out.println(figureName.getFigureInformation());
+                case CYLINDER:
+                    System.out.println(figureName.getDescription());
                     System.out.print(">>> ");
                     double rcRadius = scanner.nextDouble();
                     scanner.nextLine();
                     System.out.print(">>> ");
                     double rcHeight = scanner.nextDouble();
                     scanner.nextLine();
-                    RightCylinder rightCylinder = new RightCylinder(rcRadius, rcHeight);
-                    System.out.println(rightCylinder);
+                    Cylinder cylinder = new Cylinder(rcRadius, rcHeight);
+                    System.out.println(cylinder);
                     break;
                 default:
                     System.out.println("Invalid input.");

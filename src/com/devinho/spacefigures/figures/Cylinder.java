@@ -2,12 +2,12 @@ package com.devinho.spacefigures.figures;
 
 import com.devinho.spacefigures.util.Figure;
 
-public class RightCylinder extends Figure {
+public class Cylinder extends Figure {
 
     private double radius;
     private double height;
 
-    public RightCylinder(double radius, double height) {
+    public Cylinder(double radius, double height) {
         if (radius < 0 || height < 0) {
             throw new IllegalArgumentException("Can't provide negative value");
         }

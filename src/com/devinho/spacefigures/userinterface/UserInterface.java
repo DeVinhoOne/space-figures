@@ -31,7 +31,7 @@ public class UserInterface {
 
             switch (figureName) {
                 case CUBE:
-                    System.out.println("\nYou have chosen a CUBE. Enter a side length");
+                    System.out.println(figureName.getFigureInformation());
                     System.out.print(">>> ");
                     double sideLength = scanner.nextDouble();
                     scanner.nextLine();
@@ -39,7 +39,7 @@ public class UserInterface {
                     System.out.println(cube);
                     break;
                 case SPHERE:
-                    System.out.println("\nYou have chosen a SPHERE. Enter a radius");
+                    System.out.println(figureName.getFigureInformation());
                     System.out.print(">>> ");
                     double radius = scanner.nextDouble();
                     scanner.nextLine();
@@ -47,7 +47,7 @@ public class UserInterface {
                     System.out.println(sphere);
                     break;
                 case CONE:
-                    System.out.println("\nYou have chosen a RIGHT CIRCULAR CONE. Enter a radius and a height");
+                    System.out.println(figureName.getFigureInformation());
                     System.out.print(">>> ");
                     double rccRadius = scanner.nextDouble();
                     scanner.nextLine();
@@ -58,7 +58,7 @@ public class UserInterface {
                     System.out.println(rightCircularCone);
                     break;
                 case RIGHT_CYLINDER:
-                    System.out.println("\nYou have chosen a RIGHT CYLINDER. Enter a radius and a height");
+                    System.out.println(figureName.getFigureInformation());
                     System.out.print(">>> ");
                     double rcRadius = scanner.nextDouble();
                     scanner.nextLine();

@@ -4,6 +4,7 @@ import com.devinho.spacefigures.figures.Cube;
 import com.devinho.spacefigures.figures.Cylinder;
 import com.devinho.spacefigures.figures.Sphere;
 import com.devinho.spacefigures.figures.Cone;
+import com.devinho.spacefigures.history.Read;
 import com.devinho.spacefigures.history.Write;
 import com.devinho.spacefigures.util.FigureNames;
 
@@ -13,10 +14,12 @@ public class UserInterface {
 
     private Scanner scanner;
     private Write write;
+    private Read read;
 
     public UserInterface() {
         this.scanner = new Scanner(System.in);
         this.write = new Write();
+        this.read = new Read();
     }
 
     public void start() {
@@ -29,6 +32,9 @@ public class UserInterface {
             if (input.equalsIgnoreCase("x")) {
                 System.out.println("*** Goodbye ***");
                 break;
+            } else if (input.equalsIgnoreCase("hst")) {
+                read.printHistory();
+                continue;
             }
             FigureNames figureName = FigureNames.valueOf(input.toUpperCase());
 

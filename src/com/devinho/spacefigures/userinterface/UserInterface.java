@@ -4,6 +4,7 @@ import com.devinho.spacefigures.figures.Cube;
 import com.devinho.spacefigures.figures.Cylinder;
 import com.devinho.spacefigures.figures.Sphere;
 import com.devinho.spacefigures.figures.Cone;
+import com.devinho.spacefigures.history.Write;
 import com.devinho.spacefigures.util.FigureNames;
 
 import java.util.Scanner;
@@ -11,9 +12,11 @@ import java.util.Scanner;
 public class UserInterface {
 
     private Scanner scanner;
+    private Write write;
 
     public UserInterface() {
         this.scanner = new Scanner(System.in);
+        this.write = new Write();
     }
 
     public void start() {
@@ -36,6 +39,7 @@ public class UserInterface {
                     double sideLength = scanner.nextDouble();
                     scanner.nextLine();
                     Cube cube = new Cube(sideLength);
+                    write.append(cube.savableString());
                     System.out.println(cube);
                     break;
                 case SPHERE:
@@ -44,6 +48,7 @@ public class UserInterface {
                     double radius = scanner.nextDouble();
                     scanner.nextLine();
                     Sphere sphere = new Sphere(radius);
+                    write.append(sphere.savableString());
                     System.out.println(sphere);
                     break;
                 case CONE:
@@ -55,6 +60,7 @@ public class UserInterface {
                     double rccHeight = scanner.nextDouble();
                     scanner.nextLine();
                     Cone cone = new Cone(rccRadius, rccHeight);
+                    write.append(cone.savableString());
                     System.out.println(cone);
                     break;
                 case CYLINDER:
@@ -66,6 +72,7 @@ public class UserInterface {
                     double rcHeight = scanner.nextDouble();
                     scanner.nextLine();
                     Cylinder cylinder = new Cylinder(rcRadius, rcHeight);
+                    write.append(cylinder.savableString());
                     System.out.println(cylinder);
                     break;
                 default:
@@ -88,9 +95,10 @@ public class UserInterface {
         System.out.println("\tcube");
         System.out.println("\tsphere");
         System.out.println("\tcone");
-        System.out.println("\tright_cylinder");
+        System.out.println("\tcylinder");
         System.out.println();
-        System.out.println("If You want to exit, type x.");
+        System.out.println("Check history by typing \"hst\".");
+        System.out.println("If You want to exit, type \"x\".");
         System.out.println("--------------------------------");
     }
 }

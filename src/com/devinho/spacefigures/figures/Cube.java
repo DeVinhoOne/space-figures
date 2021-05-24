@@ -2,6 +2,8 @@ package com.devinho.spacefigures.figures;
 
 import com.devinho.spacefigures.util.Figure;
 
+import java.util.Date;
+
 public class Cube extends Figure {
 
     private double sideLength;
@@ -21,6 +23,11 @@ public class Cube extends Figure {
     @Override
     public double volume() {
         return sideLength * sideLength * sideLength;
+    }
+
+    @Override
+    public String savableString() {
+        return "CUBE/side=" + this.sideLength + "/area=" + this.area() + "/volume=" + this.volume() + "/date=" + new Date();
     }
 
     @Override

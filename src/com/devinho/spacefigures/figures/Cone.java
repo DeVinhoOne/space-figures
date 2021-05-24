@@ -2,6 +2,8 @@ package com.devinho.spacefigures.figures;
 
 import com.devinho.spacefigures.util.Figure;
 
+import java.util.Date;
+
 public class Cone extends Figure {
 
     private double radius;
@@ -23,6 +25,11 @@ public class Cone extends Figure {
     @Override
     public double volume() {
         return Math.PI * this.radius * this.radius * (this.height / 3);
+    }
+
+    @Override
+    public String savableString() {
+        return "CONE/radius=" + this.radius + "/height=" + this.height + "/area=" + this.area() + "/volume=" + this.volume() + "/date=" + new Date();
     }
 
     @Override
